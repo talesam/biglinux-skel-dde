@@ -1,0 +1,21 @@
+# Maintainer: Barnabé <barnabedikartola@gmail.com>
+
+pkgname=biglinux-skel-dde
+pkgver=$(date +%y.%m.%d)
+pkgrel=$(date +%H%M)
+pkgdesc="Skel for BigLinux Community DDE"
+arch=('any')
+url="https://github.com/biglinux/$pkgname"
+license=('GPL3')
+# depends=('')
+provides=("$pkgname")
+source=("git+${url}.git")
+sha256sums=('SKIP')
+
+#bigskel=$(pacman -Ss biglinux-skel- | awk -F'[/ ]' '{print $2}')
+conflicts=('big-skel')
+#"$bigskel"
+
+package() {
+    cp -r "${srcdir}/${pkgname}/etc/" "${pkgdir}/"
+}
