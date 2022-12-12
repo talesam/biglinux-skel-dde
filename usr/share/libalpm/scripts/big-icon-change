@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Copia o arquivo de icone do biglinux para todas as pastas recursivas dentro de ../places/*
+find /usr/share/icons/bloom/places -type f -name deepin-launcher.svg -exec cp -f big-deepin-louncher.svg {} +
