@@ -1,12 +1,12 @@
 #!/bin/sh
 
 # Move todos os wallpapers do biglinux para dentro da pasta deepin
-if [ -e "/usr/share/wallpapers/deppin" ]; then
-    mv /usr/share/wallpapers/*.jpg /usr/share/wallpapers/deppin/
+if [ -e "/usr/share/wallpapers/deepin" ]; then
+    mv /usr/share/wallpapers/*.jpg /usr/share/wallpapers/deepin/
 else
     mkdir /usr/share/wallpapers/deppin/
     if [ "$?" -eq "0" ]; then
-        mv /usr/share/wallpapers/*.jpg /usr/share/wallpapers/deppin/
+        mv /usr/share/wallpapers/*.jpg /usr/share/wallpapers/deepin/
     else
         exit 0
     fi
